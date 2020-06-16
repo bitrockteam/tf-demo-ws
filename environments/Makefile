@@ -71,6 +71,5 @@ destroy: check
 	@read -p "Press enter to continue"
 
 	@terraform destroy \
-		-var-file="framework/$(value ENV).tfvars" \
-		-var-file="system_vars/$(value ENV).tfvars"
+		-var-file="env_vars/$(value ENV).tfvars" 
 
