@@ -2,8 +2,10 @@
 
 Prerequisite
 -Already have installed and configured your AWS CLI.
-  Ref: 
+  Ref:
+ 
 	Linux : https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
+
 	Mac : https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html
 
 - S3 bucket as backend
@@ -35,7 +37,4 @@ terraform {
 }
 
 
-
-
-# tf-demo
 # tf-demo
