@@ -30,6 +30,7 @@ Update backend.tf and replace your bucket name = "tf-statefiles-your-region", yo
 
 
 tf-demo/
+
 ├── environments
 
 │   ├── backend.tf
