@@ -25,7 +25,7 @@ To simplify the demo, all these resources are created from this module :
 
  terraform-aws-modules/vpc/aws
 
- This module will create the VPC, subnets, S3, route tables , igw. Etc for each env...
+ This module will create the VPC, subnets, route tables , igw. also is created a S3 bucket for each env...
 
 
 Update backend.tf and replace your bucket name = "tf-statefiles-your-region", your region , your key and your profile.
