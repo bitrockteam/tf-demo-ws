@@ -1,4 +1,4 @@
-# tf-demo
+# tf-demo - show how to work with workspaces on TF using Makefile
 
 Prerequisite
 -Already have installed and configured your AWS CLI.
