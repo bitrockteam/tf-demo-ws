@@ -31,16 +31,27 @@ Update backend.tf and replace your bucket name = "tf-statefiles-your-region", yo
 
 tf-demo/
 ├── environments
+
 │   ├── backend.tf
+
 │   ├── env_vars
+
 │   │   ├── development.tfvars
+
 │   │   ├── production.tfvars
+
 │   │   └── testing.tfvars
+
 │   ├── Makefile
+
 │   ├── providers.tf
+
 │   ├── s3.tf
+
 │   ├── variables.tf
+
 │   └── vpc.tf
+
 └── README.md
 
 
