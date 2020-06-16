@@ -1,0 +1,6 @@
+# Compile files
+*.tfstate
+*.tfstate.backup
+
+♯ Module directory
+environments/.terraform/
