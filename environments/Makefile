@@ -72,4 +72,8 @@ destroy: check
 
 	@terraform destroy \
 		-var-file="env_vars/$(value ENV).tfvars" 
+        
+	@echo "Deleting the backend workspaces...[$(value ENV)]"
+	@terraform workspace select default
+	@terraform workspace delete $(value ENV) 
 
