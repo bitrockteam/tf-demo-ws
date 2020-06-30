@@ -32,12 +32,15 @@ Update environment/env_vars/environment.tfvars and replace your account id, prof
 With that, you are ready to go, and you could run Makefile.
 
 Run init just one time to create the workspaces and setup Terraform.
+
 $ENV=workspaces make init 
 
 Replace ENV with the name of the workspace that you want to deploy, sample "development".
+
 $ENV=development make plan
 
-Apply the plan created above with terraform apply
+Apply the plan created above with {terraform apply}.
+
 $ENV=develpment make apply
 
 To cleanup 
