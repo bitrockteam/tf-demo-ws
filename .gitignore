@@ -3,4 +3,4 @@
 *.tfstate.backup
 
 ♯ Module directory
-environments/.terraform/
+environment/.terraform/

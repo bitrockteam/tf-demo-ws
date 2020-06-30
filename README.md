@@ -26,20 +26,27 @@ To simplify the demo, all these resources are created from this module :
  This module will create the VPC, subnets, route tables , igw. also is created a S3 bucket for each env...
 
 
-Update backend.tf and replace your bucket name, your region  and your profile.
+Update environment/env_vars/<environment.tfvars> and replace your account id, profile and region.
 
-You are ready to go, you could run Makefile.
+- environment/backend.tf  *Already using the s3 backend name from setup.sh 
 
+With that, you are ready to go, and you could run Makefile.
+
+Run init just one time to create the workspaces and setup Terraform.
 $ENV=workspaces make init 
 
+Replace ENV with the name of the workspace that you want to deploy, sample "development".
 $ENV=development make plan
 
+Apply the plan created above with terraform apply
 $ENV=develpment make apply
 
 To cleanup 
 
 $ENV=development make destroy
 
+
+Directory structure:
 
 tf-demo/
 
