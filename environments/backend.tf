@@ -1,9 +1,12 @@
 terraform {
+  required_version = "~> 0.12.24"
   backend "s3" {
-    bucket  = "tf-statefiles-eu-west-1"
-    key     = "terraform/terraform.tfstate"
-    region  = "eu-west-1"
-    profile = "victor-test"
+    bucket         = "workspace-tfstate-eu-west-1"
+    key            = ".terraform/terraform.tfstate"
+    dynamodb_table = "eu-west-1-tfstate"
+    encrypt        = true
+    region         = "eu-west-1"
+    profile        = "as parameter of Makefile"
   }
 }
 

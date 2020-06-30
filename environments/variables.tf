@@ -1,14 +1,19 @@
 variable "home" {
-  type        = string
-  description = "Your home directory"
+  type = string
 }
 
 variable "aws_account_id" {
-  type        = string
-  description = "Your AWS account ID"
+  type = string
 }
+
+variable "aws_profile" {
+  type        = string
+  description = "Your AWS profile"
+}
+
 variable "aws_region" {
   type        = string
+  default     = "eu-west-1"
   description = "Your AWS region"
 }
 

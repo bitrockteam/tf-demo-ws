@@ -1,7 +1,6 @@
 UNAME:=$(shell uname)
 TERRAFORM_VERSION="0.12.25"
 TF_VERSION=`terraform -v | head -1 | awk -F "v" '{print $2}'`
-TERRAFORM:= $(shell command -v terraform 2> /dev/null)
 
 default:
 
@@ -14,9 +13,6 @@ default:
 
 check-init: check
 	@echo ""
-	ifndef TERRAFORM 
-		$(error "terraform is not available please install it before continue")
-	endif 
 	@if [ "$(value ENV)" != "workspaces" ]; then echo "Please define ENV=workspaces to initialize TF"; exit 1; fi
 
 check:
@@ -26,6 +22,8 @@ check:
 init: check-init
 	@echo ""
 	@echo "Starting the creation of workspaces defined"
+	@echo ""
+	@echo "[ development , testing , production ]"
 	@echo ""
 	@read -p "Press enter to continue"
 

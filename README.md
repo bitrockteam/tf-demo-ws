@@ -8,17 +8,15 @@ Prerequisite
 
 	Mac : https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html
 
-- S3 bucket as backend
+- S3 bucket as backend and DynamoDB table with LOCKID.
+
    Linux or macOS
-	$ export AWS_PROFILE=my_profile
+	$ export AWS_PROFILE=my_profile ; export AWS_REGION=my_region
 
-	Create the bucket with AWS CLI:
-
-	aws s3 mb s3://tf-statefiles-${TF_RG} --region ${TF_RG} --profile my-profile
-
-	Enable versioning:
-
-	aws s3api put-bucket-versioning --bucket tf-statefiles-${TF_RG} --versioning-configuration Status=Enabled
+       Run the script "setup.sh"
+        - S3 backend will be created, enabled versioning and encryption.
+        - DynamoDB table will be crated with index LOCKID.
+          
 
 This repo defines 3 different environments and will create 20 (aws resources) on each one.
 To simplify the demo, all these resources are created from this module :     
@@ -28,7 +26,7 @@ To simplify the demo, all these resources are created from this module :
  This module will create the VPC, subnets, route tables , igw. also is created a S3 bucket for each env...
 
 
-Update backend.tf and replace your bucket name = "tf-statefiles-your-region", your region , your key and your profile.
+Update backend.tf and replace your bucket name, your region  and your profile.
 
 You are ready to go, you could run Makefile.
 
