@@ -25,10 +25,9 @@ To simplify the demo, all these resources are created from this module :
 
  This module will create the VPC, subnets, route tables , igw. also is created a S3 bucket for each env...
 
+Update environment/env_vars/environment.tfvars and replace your account id, profile and region.
 
-Update environment/env_vars/<environment.tfvars> and replace your account id, profile and region.
-
-- environment/backend.tf  *Already using the s3 backend name from setup.sh 
+- environment/backend.tf  (Already using the s3 backend name from setup.sh )
 
 With that, you are ready to go, and you could run Makefile.
 
